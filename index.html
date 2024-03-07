@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScriptをHTMLファイルに埋め込む例</title>
+    <title>Delayed Text Animation</title>
+    <style>
+        /* アニメーション用のCSS */
+        #text {
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 36px;
+            border-right: 2px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h1>JavaScriptをHTMLファイルに埋め込む例</h1>
+    <div id="text"></div>
 
-    <p id="demo">この段落の内容はJavaScriptによって変更されます。</p>
-
-    <!-- JavaScriptコードを埋め込む -->
     <script>
-        // JavaScriptコード
-        document.getElementById("demo").innerHTML = "この段落の内容はJavaScriptによって変更されました。";
+        // 表示する文字列
+        const text = "Hello, World!";
+        // 表示間隔（ミリ秒）
+        const delay = 100;
+
+        let i = 0;
+        // 文字を一文字ずつ表示する関数
+        function showText() {
+            if (i < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(showText, delay);
+            }
+        }
+
+        // ページ読み込み時にアニメーションを開始
+        window.onload = function() {
+            showText();
+        };
     </script>
 </body>
 </html>
