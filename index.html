@@ -3,42 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>安藤大輝の運転免許試験失敗</title>
-    <style>
-        /* 要素の初期状態を非表示に設定 */
-        .hidden {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-    </style>
+    <title>JavaScriptをHTMLファイルに埋め込む例</title>
 </head>
 <body>
-    <h1 class="hidden">安藤大輝の運転免許試験失敗</h1>
-    <p class="hidden">安藤大輝さんは、運転免許試験に落ちました。残念ながら、彼は免許を取得できませんでした。</p>
+    <h1>JavaScriptをHTMLファイルに埋め込む例</h1>
 
-    <h2 class="hidden">落ちた理由</h2>
-    <p class="hidden">安藤さんは、試験中に交通ルールに違反したため、試験に合格することができませんでした。彼は信号を無視し、制限速度を守らなかったため、試験官によって不合格とされました。</p>
+    <p id="demo">この段落の内容はJavaScriptによって変更されます。</p>
 
-    <h2 class="hidden">再挑戦への意欲</h2>
-    <p class="hidden">安藤さんは失敗を受け入れ、次回の試験に向けて努力する決意を示しています。彼は交通ルールを再度勉強し、運転技術を向上させることで、免許を取得する準備をしています。</p>
-
-    <p class="hidden">安藤さんには再挑戦への応援を送りましょう！</p>
-
+    <!-- JavaScriptコードを埋め込む -->
     <script>
-        // 要素を時間差で表示する関数
-        function showElementsWithDelay() {
-            const elements = document.querySelectorAll('.hidden');
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('fade-in');
-                }, 1000 * index); // インデックスに応じて時間差を設定
-            });
-        }
-
-        // ページ読み込み完了後に実行
-        window.onload = function() {
-            showElementsWithDelay();
-        };
+        // JavaScriptコード
+        document.getElementById("demo").innerHTML = "この段落の内容はJavaScriptによって変更されました。";
     </script>
 </body>
 </html>
+
