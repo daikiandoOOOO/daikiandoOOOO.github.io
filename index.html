@@ -4,6 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>安藤大輝の運転免許試験失敗</title>
+    <style>
+        /* CSSアニメーションの定義 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* 背景色の変化をアニメーションで適用 */
+        body {
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* ヘッダーの動きを追加 */
+        h1 {
+            color: blue;
+            animation: slideInLeft 1s ease-in-out;
+        }
+        /* 詳細セクションの動きを追加 */
+        h2, p {
+            animation: slideInRight 1s ease-in-out;
+        }
+        /* 左から右にスライドインするアニメーション */
+        @keyframes slideInLeft {
+            from {
+                margin-left: -100px;
+                opacity: 0;
+            }
+            to {
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+        /* 右から左にスライドインするアニメーション */
+        @keyframes slideInRight {
+            from {
+                margin-left: 100px;
+                opacity: 0;
+            }
+            to {
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>安藤大輝の運転免許試験失敗</h1>
@@ -18,4 +64,3 @@
     <p>安藤さんには再挑戦への応援を送りましょう！</p>
 </body>
 </html>
-
